@@ -103,6 +103,8 @@ examples = [
     ["Quiero aprender a tocar la guitarra. ¿Puedes proporcionar algunos consejos prácticos para principiantes y sugerencias de canciones fáciles?", None, None, None, None, None,],
     ["¿Cuál es tu opinión sobre el impacto de la inteligencia artificial en la sociedad y cómo deberíamos abordar sus desafíos éticos?", None, None, None, None, None,],
     ["Estoy planeando un viaje gastronómico. ¿Puedes sugerirme algunos destinos culinarios imperdibles y platos locales para probar?", None, None, None, None, None,],
+    ["Pregunta sobre viajes", "Historia previa sobre viajes", "Prompt del sistema sobre destinos turísticos", 0.8, 300, 0.85, 1.1],
+    ["Solicitud creativa", "Historia previa creativa", "Prompt del sistema creativo", 0.7, 200, 0.80, 1.2],
 ]
 
 # Crear una interfaz de chat Gradio con el modelo generativo

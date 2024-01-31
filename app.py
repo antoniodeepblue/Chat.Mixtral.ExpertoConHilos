@@ -103,8 +103,12 @@ examples = [
     ["Quiero aprender a tocar la guitarra. ¿Puedes proporcionar algunos consejos prácticos para principiantes y sugerencias de canciones fáciles?", None, None, None, None, None,],
     ["¿Cuál es tu opinión sobre el impacto de la inteligencia artificial en la sociedad y cómo deberíamos abordar sus desafíos éticos?", None, None, None, None, None,],
     ["Estoy planeando un viaje gastronómico. ¿Puedes sugerirme algunos destinos culinarios imperdibles y platos locales para probar?", None, None, None, None, None,],
-    ["Pregunta sobre viajes", "Historia previa sobre viajes", "Prompt del sistema sobre destinos turísticos", 0.8, 300, 0.85, 1.1],
-    ["Solicitud creativa", "Historia previa creativa", "Prompt del sistema creativo", 0.7, 200, 0.80, 1.2],
+    ["Viaje a la isla de Ibiza", "Prompt del sistema sobre destinos turísticos", 0.8, 300, 0.85, 1.1],
+    ["Cuentame una historia creativa", "Prompt del sistema crativo", 0.7, 200, 0.80, 1.2],
+    ["Cuéntame una historia de ciencia ficción", "Prompt del sistema de ciencia ficción", 0.7, 150, 0.80, 1.1],
+    ["Receta de cochinillo asado", "Prompt del sistema sobre cocina", 0.8, 250, 0.85, 1.2],
+    ["Recomendación de película de acción", "Prompt del sistema de recomendación", 0.7, 180, 0.75, 1.2],
+    ["¿Que es la vía Lactea", "Prompt del sistema científico", 0.8, 180, 0.80, 1.1],
 ]
 
 # Crear una interfaz de chat Gradio con el modelo generativo

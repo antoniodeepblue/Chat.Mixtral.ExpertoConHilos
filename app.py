@@ -85,19 +85,19 @@ additional_inputs=[
     )
 ]
 
-examples=[["I'm planning a vacation to Japan. Can you suggest a one-week itinerary including must-visit places and local cuisines to try?", None, None, None, None, None, ],
-          ["Can you write a short story about a time-traveling detective who solves historical mysteries?", None, None, None, None, None,],
-          ["I'm trying to learn French. Can you provide some common phrases that would be useful for a beginner, along with their pronunciations?", None, None, None, None, None,],
-          ["I have chicken, rice, and bell peppers in my kitchen. Can you suggest an easy recipe I can make with these ingredients?", None, None, None, None, None,],
-          ["Can you explain how the QuickSort algorithm works and provide a Python implementation?", None, None, None, None, None,],
-          ["What are some unique features of Rust that make it stand out compared to other systems programming languages like C++?", None, None, None, None, None,],
+examples=[["Estoy planeando unas vacaciones en Japón. ¿Puedes sugerir un itinerario de una semana que incluya lugares de visita obligada y cocinas locales para probar?", None, None, None, None, None, ],
+          ["¿Puedes escribir una historia corta sobre un detective que viaja en el tiempo y resuelve misterios históricos?", None, None, None, None, None,],
+          ["Estoy tratando de aprender francés. ¿Puedes proporcionar algunas frases comunes que serían útiles para un principiante, junto con sus pronunciaciones?", None, None, None, None, None,],
+          ["Tengo pollo, arroz y pimientos morrones en mi cocina. ¿Puedes sugerir una receta fácil que pueda hacer con estos ingredientes?", None, None, None, None, None,],
+          ["¿Puede explicar cómo funciona el algoritmo QuickSort y proporcionar una implementación de Python?", None, None, None, None, None,],
+          ["¿Cuáles son algunas de las características únicas de Rust que lo hacen destacar en comparación con otros lenguajes de programación de sistemas como C++?", None, None, None, None, None,],
          ]
 
 gr.ChatInterface(
     fn=generate,
     chatbot=gr.Chatbot(show_label=False, show_share_button=False, show_copy_button=True, likeable=True, layout="panel"),
     additional_inputs=additional_inputs,
-    title="Mixtral 46.7B",
+    title="Mixtral 46.7B Fines didácticos ",
     examples=examples,
     concurrency_limit=20,
 ).launch(show_api=False)

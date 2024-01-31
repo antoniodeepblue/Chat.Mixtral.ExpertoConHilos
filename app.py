@@ -108,7 +108,7 @@ examples = [
     ["Cuéntame una historia de ciencia ficción", "Prompt del sistema de ciencia ficción", 0.7, 150, 0.80, 1.1],
     ["Receta de cochinillo asado", "Prompt del sistema sobre cocina", 0.8, 250, 0.85, 1.2],
     ["Recomendación de película de acción", "Prompt del sistema de recomendación", 0.7, 180, 0.75, 1.2],
-    ["¿Que es la vía Lactea", "Prompt del sistema científico", 0.8, 180, 0.80, 1.1],
+    ["¿Que es la vía Lactea?", "Prompt del sistema científico", 0.8, 180, 0.80, 1.1],
 ]
 
 # Crear una interfaz de chat Gradio con el modelo generativo

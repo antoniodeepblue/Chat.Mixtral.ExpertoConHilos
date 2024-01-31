@@ -1,4 +1,4 @@
-Descripción del Código:
+# Descripción del Código:
 
 1. Importación de Bibliotecas:
 from huggingface_hub import InferenceClient
@@ -51,7 +51,7 @@ gr.ChatInterface(
 
 * Se crea la interfaz Gradio para la función de generación de texto. Incluye la entrada del usuario, las inputs adicionales configuradas y otros elementos visuales.
 
-Inputs Adicionales en la Interfaz Gradio:
+# Inputs Adicionales en la Interfaz Gradio:
 
 * System Prompt (Entrada de Texto): Permite al usuario ingresar un prompt del sistema para contextualizar la conversación.
 

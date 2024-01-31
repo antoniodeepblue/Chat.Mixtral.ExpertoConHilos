@@ -97,12 +97,12 @@ additional_inputs = [
 
 # Ejemplos predefinidos para la interfaz Gradio
 examples = [
-    ["Cuéntame una historia de ciencia ficción que involucre viajes en el tiempo y descubrimientos científicos asombrosos.", None, None, None, None, None, ],
-    ["Necesito ayuda para redactar un correo electrónico profesional. ¿Puedes sugerirme cómo empezar y qué puntos clave incluir?", None, None, None, None, None,],
-    ["Estoy organizando una fiesta sorpresa. ¿Puedes ayudarme a redactar una invitación creativa y emocionante?", None, None, None, None, None,],
-    ["Quiero aprender a tocar la guitarra. ¿Puedes proporcionar algunos consejos prácticos para principiantes y sugerencias de canciones fáciles?", None, None, None, None, None,],
-    ["¿Cuál es tu opinión sobre el impacto de la inteligencia artificial en la sociedad y cómo deberíamos abordar sus desafíos éticos?", None, None, None, None, None,],
-    ["Estoy planeando un viaje gastronómico. ¿Puedes sugerirme algunos destinos culinarios imperdibles y platos locales para probar?", None, None, None, None, None,],
+    ["Cuéntame una historia de ciencia ficción que involucre viajes en el tiempo y descubrimientos científicos asombrosos.", None, 0.7, 200, 0.80, 1.2],
+    ["Necesito ayuda para redactar un correo electrónico profesional. ¿Puedes sugerirme cómo empezar y qué puntos clave incluir?", None, 0.7, 200, 0.80, 1.2],
+    ["Estoy organizando una fiesta sorpresa. ¿Puedes ayudarme a redactar una invitación creativa y emocionante?", None, 0.7, 200, 0.80, 1.2],
+    ["Quiero aprender a tocar la guitarra. ¿Puedes proporcionar algunos consejos prácticos para principiantes y sugerencias de canciones fáciles?", None, 0.7, 200, 0.80, 1.2],
+    ["¿Cuál es tu opinión sobre el impacto de la inteligencia artificial en la sociedad y cómo deberíamos abordar sus desafíos éticos?", None, 0.7, 200, 0.80, 1.2],
+    ["Estoy planeando un viaje gastronómico. ¿Puedes sugerirme algunos destinos culinarios imperdibles y platos locales para probar?", None, 0.7, 200, 0.80, 1.2],
     ["Viaje a la isla de Ibiza", "Prompt del sistema sobre destinos turísticos", 0.8, 300, 0.85, 1.1],
     ["Cuentame una historia creativa", "Prompt del sistema crativo", 0.7, 200, 0.80, 1.2],
     ["Cuéntame una historia de ciencia ficción", "Prompt del sistema de ciencia ficción", 0.7, 150, 0.80, 1.1],

@@ -1,7 +1,9 @@
 # Descripción del Código:
 
 1. Importación de Bibliotecas:
+   
    from huggingface_hub import InferenceClient
+   
    import gradio as gr
 
 * InferenceClient: Se utiliza para realizar inferencias (generación de texto en este caso) con modelos alojados en Hugging Face Hub.

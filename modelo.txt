@@ -1,0 +1,9 @@
+Modelo de tarjeta para Mixtral-8x7B
+
+El modelo de lenguaje grande (LLM) Mixtral-8x7B es una mezcla dispersa generativa preentrenada de expertos. El Mixtral-8x7B supera al Llama 2 70B en la mayoría de los puntos de referencia que probamos.
+
+Para obtener todos los detalles de este modelo, lea nuestra publicación de blog de lanzamiento.
+
+Advertencia
+
+Este repositorio contiene pesos que son compatibles con el servicio vLLM del modelo, así como con la biblioteca de transformadores Hugging Face. Se basa en la versión original de Mixtral torrent, pero el formato de archivo y los nombres de los parámetros son diferentes. Tenga en cuenta que el modelo no se puede (todavía) instanciar con HF.

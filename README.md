@@ -1,6 +1,6 @@
 ---
 title: Chat.Mixtral
-emoji: 🚀
+emoji: 🎓
 colorFrom: blue
 colorTo: indigo
 sdk: gradio

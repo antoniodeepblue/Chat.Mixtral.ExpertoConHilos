@@ -1,4 +1,4 @@
-## Descripción del Código:
+# Descripción del Código:
 
 1. Importación de Bibliotecas:
    from huggingface_hub import InferenceClient
@@ -14,26 +14,27 @@
 
 3. Función para Formatear el Prompt:
    def format_prompt(message, history):
-  # ... (ver código para detalles)
+   ... (ver código para detalles)
 
 * Esta función toma un mensaje, junto con la historia de conversación, y lo formatea adecuadamente para el modelo.
 
 4. Función para Generar Texto:
    def generate(prompt, history, system_prompt, temperature=0.9, max_new_tokens=256, top_p=0.95, repetition_penalty=1.0):
-  # ... (ver código para detalles)
+   ... (ver código para detalles)
+
 
 * La función principal para generar texto. Toma varios parámetros, incluyendo el prompt del usuario, historial de conversación, temperatura, etc.
 
 5. Definición de Inputs Adicionales:
    additional_inputs = [
-    # ... (ver código para detalles)
+     ... (ver código para detalles)
 ]
 
 * Se definen inputs adicionales para la interfaz Gradio. Estos permiten al usuario ajustar configuraciones como la temperatura, la longitud máxima del texto generado, etc.
 
 6. Ejemplos para la Interfaz Gradio:
    examples = [
-    # ... (ver código para detalles)
+     ... (ver código para detalles)
 ]
 
 * Se proporcionan ejemplos que serán mostrados en la interfaz Gradio para ayudar a los usuarios a comenzar.
@@ -51,7 +52,7 @@
 
 * Se crea la interfaz Gradio para la función de generación de texto. Incluye la entrada del usuario, las inputs adicionales configuradas y otros elementos visuales.
 
-## Inputs Adicionales en la Interfaz Gradio:
+# Inputs Adicionales en la Interfaz Gradio:
 
 * System Prompt (Entrada de Texto): Permite al usuario ingresar un prompt del sistema para contextualizar la conversación.
 

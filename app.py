@@ -6,17 +6,17 @@ import gradio as gr
 client = InferenceClient("mistralai/Mixtral-8x7B-Instruct-v0.1")
 
 # Función para formatear el prompt con historial
-def format_prompt(message, history):
+def format_prompt(message, history, system_prompt):
     prompt = "<s>"
     for user_prompt, bot_response in history:
         prompt += f"[INST] {user_prompt} [/INST]"
         prompt += f" {bot_response}</s> "
-    prompt += f"[INST] {message} [/INST]"
+    prompt += f"[INST] {system_prompt}, {message} [/INST]"
     return prompt
 
 # Función para generar respuestas dada una serie de parámetros
 def generate(
-    prompt, history, system_prompt, temperature=0.9, max_new_tokens=256, top_p=0.95, repetition_penalty=1.0,
+    prompt, history, system_prompt= "Soy un Experto en Inteligencia Artificial", temperature=0.9, max_new_tokens=256, top_p=0.95, repetition_penalty=1.0,
 ):
     # Ajustar valores de temperatura y top_p para asegurar que estén en el rango adecuado
     temperature = float(temperature)
@@ -35,7 +35,7 @@ def generate(
     )
 
     # Formatear el prompt y obtener la respuesta del modelo de manera continua
-    formatted_prompt = format_prompt(f"{system_prompt}, {prompt}", history)
+    formatted_prompt = format_prompt(prompt, history, system_prompt)
     stream = client.text_generation(formatted_prompt, **generate_kwargs, stream=True, details=True, return_full_text=False)
     output = ""
 
@@ -47,7 +47,7 @@ def generate(
 
 # Configurar inputs adicionales para la interfaz Gradio
 additional_inputs = [
-    # Entrada de texto para el System Prompt
+    # Entrada de texto para el System Prompt (puedes omitir esto si no lo necesitas)
     gr.Textbox(
         label="System Prompt",
         max_lines=1,

@@ -1,5 +1,5 @@
 ---
-title: Chat.Mixtral
+title: Chat.Mixtral.ExpertoIA
 emoji: 🎓
 colorFrom: blue
 colorTo: indigo

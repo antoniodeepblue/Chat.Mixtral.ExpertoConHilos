@@ -16,7 +16,7 @@ def format_prompt(message, history, system_prompt):
 
 # Función para generar respuestas dada una serie de parámetros
 def generate(
-    prompt, history, system_prompt= "Soy un Experto en Inteligencia Artificial", temperature=0.9, max_new_tokens=256, top_p=0.95, repetition_penalty=1.0,
+    prompt, history, system_prompt= "Experto en Inteligencia Artificial", temperature=0.9, max_new_tokens=256, top_p=0.95, repetition_penalty=1.0,
 ):
     # Ajustar valores de temperatura y top_p para asegurar que estén en el rango adecuado
     temperature = float(temperature)
@@ -97,10 +97,10 @@ additional_inputs = [
 
 # Ejemplos predefinidos para la interfaz Gradio
 examples = [
-    ["Haz un resumen de los modelos preentrenados", "Soy un Experto en Inteligencia Artificial", 0.7, 150, 0.80, 1.1],
-    ["Describeme la librería Pandas", "Soy un Experto en Inteligencia Artificial", 0.8, 250, 0.85, 1.2],
-    ["¿Que es un Agente?", "Soy un Experto en Aprendizaje por Refuerzo", 0.7, 180, 0.75, 1.2],
-    ["¿Que son los Outliers?", "Soy un Experto en Minería de Datos", 0.8, 180, 0.80, 1.1],
+    ["Haz un resumen de los modelos preentrenados", "Experto en Inteligencia Artificial", 0.7, 150, 0.80, 1.1],
+    ["Describeme la librería Pandas", "Experto en Inteligencia Artificial", 0.8, 250, 0.85, 1.2],
+    ["¿Que es un Agente?", "Experto en Aprendizaje por Refuerzo", 0.7, 180, 0.75, 1.2],
+    ["¿Que son los Outliers?", "Experto en Minería de Datos", 0.8, 180, 0.80, 1.1],
 ]
 
 # Crear una interfaz de chat Gradio con el modelo generativo

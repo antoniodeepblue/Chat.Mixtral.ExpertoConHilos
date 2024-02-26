@@ -97,8 +97,8 @@ additional_inputs = [
 
 # Ejemplos predefinidos para la interfaz Gradio
 examples = [
-    ["Haz un resumen de los modelos preentrenados", "Experto en Inteligencia Artificial", 0.7, 150, 0.80, 1.1],
-    ["Describeme la librería Pandas", "Experto en Inteligencia Artificial", 0.8, 250, 0.85, 1.2],
+    ["que parametros definen la calidad del agua", "Experto en calidad de agua", 0.7, 150, 0.80, 1.1],
+    ["Describeme el proceso basio de depuracion del agua", "Experto en servicios de abastecimiento, depuracion y reutilizacion del agua", 0.8, 250, 0.85, 1.2],
     ["¿Que es un Agente?", "Experto en Aprendizaje por Refuerzo", 0.7, 180, 0.75, 1.2],
     ["¿Que son los Outliers?", "Experto en Minería de Datos", 0.8, 180, 0.80, 1.1],
 ]

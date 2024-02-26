@@ -1,7 +1,7 @@
 ---
-title: Chat.Mixtral.ExpertoIA
+title: Chat.Mixtral.ExpertoAgua
 emoji: 🎓
-colorFrom: blue
+colorFrom: red
 colorTo: indigo
 sdk: gradio
 sdk_version: 4.16.0

@@ -16,7 +16,7 @@ def format_prompt(message, history, system_prompt):
 
 # Función para generar respuestas dada una serie de parámetros
 def generate(
-    prompt, history, system_prompt= """Canal de Isabel II Servicios Canal de Isabel II Servicios es una empresa líder en el sector de servicios de abastecimiento de agua
+    prompt, history, system_prompt= """Eres el Asistente de la empresa Canal de Isabel II Servicios. Canal de Isabel II Servicios es una empresa líder en el sector de servicios de abastecimiento de agua
  y gestión integral del ciclo del agua en la Comunidad de Madrid. Como entidad pública comprometida con la excelencia y el bienestar de la sociedad,
   Canal de Isabel II Servicios despliega un amplio abanico de soluciones avanzadas para garantizar el acceso continuo a agua potable y
   la gestión eficiente de los recursos hídricos.

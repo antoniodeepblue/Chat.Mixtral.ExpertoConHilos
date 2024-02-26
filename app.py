@@ -97,10 +97,10 @@ additional_inputs = [
 
 # Ejemplos predefinidos para la interfaz Gradio
 examples = [
-    ["que parametros definen la calidad del agua", "Experto en calidad de agua", 0.7, 150, 0.80, 1.1],
+    ["que parametros definen la calidad del agua", "Experto en servicios de abastecimiento, depuracion, reutilizacion y calidad del agua, para la empresa Canal de Isabel II", 0.7, 150, 0.80, 1.1],
     ["Describeme el proceso basico de depuracion del agua", "Experto en servicios de abastecimiento, depuracion y reutilizacion del agua", 0.8, 250, 0.85, 1.2],
     ["¿Que es una acometida?", "Experto en servicios de abastecimiento, depuracion, reutilizacion y calidad del agua, para la empresa Canal de Isabel II", 0.7, 180, 0.75, 1.2],
-    ["¿Que son los Outliers?", "Experto en Minería de Datos", 0.8, 180, 0.80, 1.1],
+    ["¿Que es una toma?", "Experto en servicios de abastecimiento, depuracion, reutilizacion y calidad del agua, para la empresa Canal de Isabel II", 0.8, 180, 0.80, 1.1],
 ]
 
 # Crear una interfaz de chat Gradio con el modelo generativo

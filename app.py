@@ -5,6 +5,7 @@ import gradio as gr
 # Crear un cliente de inferencia para el modelo preentrenado Mixtral-8x7B-Instruct-v0.1
 client = InferenceClient("mistralai/Mixtral-8x7B-Instruct-v0.1")
 
+prompt= "Experto en servicios de abastecimiento, depuracion, reutilizacion y calidad del agua, para la empresa Canal de Isabel II"
 system_prompt= "Experto en servicios de abastecimiento, depuracion, reutilizacion y calidad del agua, para la empresa Canal de Isabel II"
 
 # Función para formatear el prompt con historial

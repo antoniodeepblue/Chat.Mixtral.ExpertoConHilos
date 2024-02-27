@@ -16,7 +16,7 @@ def format_prompt(message, history, system_prompt):
 
 # Función para generar respuestas dada una serie de parámetros
 def generate(
-    prompt, history, system_prompt):
+    prompt, history, system_prompt="Experto en servicios de abastecimiento, depuracion, reutilizacion y calidad del agua, para la empresa Canal de Isabel II"):
     # Ajustar valores de temperatura y top_p para asegurar que estén en el rango adecuado
     temperature = float(temperature)
     if temperature < 1e-2:
@@ -49,7 +49,7 @@ additional_inputs = [
     # Entrada de texto para el System Prompt (puedes omitir esto si no lo necesitas)
     gr.Textbox(
         label="System Prompt",
-        value= "Experto en servicios de abastecimiento, depuracion, reutilizacion y calidad del agua, para la empresa Canal de Isabel II",
+        value="Experto en servicios de abastecimiento, depuracion, reutilizacion y calidad del agua, para la empresa Canal de Isabel II",
         max_lines=1,
         interactive=True,
     ),

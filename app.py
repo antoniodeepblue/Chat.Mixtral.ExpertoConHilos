@@ -16,7 +16,7 @@ def format_prompt(message, history, system_prompt):
 
 # Función para generar respuestas dada una serie de parámetros
 def generate(
-    prompt, history, system_prompt="Experto en servicios de abastecimiento, depuracion, reutilizacion y calidad del agua, para la empresa Canal de Isabel II"):
+    prompt, history, system_prompt="Experto en servicios de abastecimiento, depuracion, reutilizacion y calidad del agua, para la empresa Canal de Isabel II", temperature=0.9, max_new_tokens=256, top_p=0.95, repetition_penalty=1.0,):
     # Ajustar valores de temperatura y top_p para asegurar que estén en el rango adecuado
     temperature = float(temperature)
     if temperature < 1e-2:

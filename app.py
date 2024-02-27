@@ -53,6 +53,7 @@ additional_inputs = [
     # Entrada de texto para el System Prompt (puedes omitir esto si no lo necesitas)
     gr.Textbox(
         label="System Prompt",
+        value= "Experto en abastecimiento de agua",
         max_lines=1,
         interactive=True,
     ),

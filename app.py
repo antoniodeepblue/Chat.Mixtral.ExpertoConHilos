@@ -6,10 +6,7 @@ import gradio as gr
 client = InferenceClient("mistralai/Mixtral-8x7B-Instruct-v0.1")
 
 # Función para formatear el prompt con historial
-def format_prompt(message, history, system_prompt=None):
-    if system_prompt is None:
-        system_prompt ="Experto en servicios de abastecimiento, depuracion, reutilizacion y calidad del agua, para la empresa Canal de Isabel II"
-  
+def format_prompt(message, history, system_prompt):
     prompt = "<s>"
     for user_prompt, bot_response in history:
         prompt += f"[INST] {user_prompt} [/INST]"
@@ -53,7 +50,7 @@ additional_inputs = [
     # Entrada de texto para el System Prompt (puedes omitir esto si no lo necesitas)
     gr.Textbox(
         label="System Prompt",
-        value= "Experto en abastecimiento de agua",
+        value= "Experto en servicios de abastecimiento, depuracion, reutilizacion y calidad del agua, para la empresa Canal de Isabel II",
         max_lines=1,
         interactive=True,
     ),

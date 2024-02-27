@@ -1,7 +1,7 @@
 ---
-title: Chat.Mixtral.ExpertoAgua
+title: Chat.Mixtral.ExpertoCanalIsabelII
 emoji: 🎓
-colorFrom: red
+colorFrom: yellow
 colorTo: indigo
 sdk: gradio
 sdk_version: 4.16.0

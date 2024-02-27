@@ -67,9 +67,9 @@ additional_inputs = [
     # Control deslizante para el número máximo de nuevos tokens
     gr.Slider(
         label="Max new tokens",
-        value=256,
+        value=2048,
         minimum=0,
-        maximum=1048,
+        maximum=2048,
         step=64,
         interactive=True,
         info="El máximo número de nuevos tokens",

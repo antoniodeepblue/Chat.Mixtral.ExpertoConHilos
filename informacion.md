@@ -11,7 +11,7 @@
 
 2. Inicialización del Cliente de Inferencia:
    
-   client = InferenceClient("mistralai/Mistral-7B-Instruct-v0.2")
+   client = InferenceClient("mistralai/Mixtral-8x7B-Instruct-v0.1")
 
 * Se crea un cliente de inferencia para el modelo específico "Mistral-7B-Instruct-v0.2" alojado en Hugging Face Hub.
 
@@ -62,7 +62,7 @@
    
        additional_inputs=additional_inputs,
    
-       title="Mixtral 46.7B Fines didácticos",
+       title="Mixtral-8x7B-Instruct-v0.1 Fines didácticos",
    
        description='Autor: ... (ver código para detalles)',
    

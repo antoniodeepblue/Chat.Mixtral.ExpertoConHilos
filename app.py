@@ -99,7 +99,7 @@ additional_inputs = [
 # Ejemplos predefinidos para la interfaz Gradio
 examples = [
     ["Quiero que me verifiquen el contador de agua de mi vivienda", "Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/", 0.7, 1500, 0.80, 1.1],
-    ["Muestrame un cuadro con las tarifas que se aplican en el abastecimiento, depuración y alcantarillado ", "Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/", 0.8, 4096, 0.85, 1.2],
+    ["Muestrame un cuadro con las tarifas que se aplican en el abastecimiento, depuración y alcantarillado ", "Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/, https://www.canaldeisabelsegunda.es/clientes/", 0.8, 4096, 0.85, 1.2],
     ["¿Qué es una acometida?", "Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/", 0.7, 1800, 0.75, 1.2],
     ["¿Qué teléfono tiene para averías, información y página web?", "Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/", 0.8, 2048, 0.80, 1.1],
 ]

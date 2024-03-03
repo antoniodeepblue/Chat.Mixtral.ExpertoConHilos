@@ -98,10 +98,10 @@ additional_inputs = [
 
 # Ejemplos predefinidos para la interfaz Gradio
 examples = [
-    ["Parámetros definen la calidad del agua", "Experto en servicios de abastecimiento, depuración, reutilización y calidad del agua, para la empresa Canal de Isabel II", 0.7, 1500, 0.80, 1.1],
-    ["Descríbeme el proceso básico de depuración del agua", "Experto en servicios de abastecimiento, depuración y reutilización del agua", 0.8, 4096, 0.85, 1.2],
-    ["¿Qué es una acometida?", "Experto en servicios de abastecimiento, depuración, reutilización y calidad del agua, para la empresa Canal de Isabel II", 0.7, 1800, 0.75, 1.2],
-    ["¿Qué es una toma?", "Experto en servicios de abastecimiento, depuración, reutilización y calidad del agua, para la empresa Canal de Isabel II", 0.8, 2048, 0.80, 1.1],
+    ["Quiero que me verifiquen el contador de agua de mi vivienda", "Asistente para los usuarios y clientes de la empresa Canal de Isabel II", 0.7, 1500, 0.80, 1.1],
+    ["Muestrame un cuadro con las tarifas que se aplican en el abastecimiento, depuración y alcantarillado ", "Asistente para los usuarios y clientes de la empresa Canal de Isabel II", 0.8, 4096, 0.85, 1.2],
+    ["¿Qué es una acometida?", "Asistente para los usuarios y clientes de la empresa Canal de Isabel II", 0.7, 1800, 0.75, 1.2],
+    ["¿Qué teléfono tiene para averías, información y página web?", "Asistente para los usuarios y clientes de la empresa Canal de Isabel II", 0.8, 2048, 0.80, 1.1],
 ]
 
 # Crear una interfaz de chat Gradio con el modelo generativo
@@ -111,7 +111,7 @@ gr.ChatInterface(
     textbox=gr.Textbox(placeholder="¿Qué parámetros definen la calidad del agua?", container=False, scale=7),
     theme="soft",
     additional_inputs=additional_inputs,
-    title="Mixtral 8B Fines didácticos",
+    title="Mixtral 8B Fines didácticos Asistente de usuarios/clientes de Canal de Isabel ll",
     description='Autor: <a href=\"https://huggingface.co/Antonio49\">Antonio Fernández</a> de <a href=\"https://saturdays.ai/\">SaturdaysAI</a>. Formación: <a href=\"https://cursos.saturdays.ai/courses/\">Cursos Online AI</a> Aplicación desarrollada con fines docentes',
     examples=examples,
     cache_examples=True,

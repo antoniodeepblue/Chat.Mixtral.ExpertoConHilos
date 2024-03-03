@@ -107,9 +107,9 @@ examples = [
 # Crear una interfaz de chat Gradio con el modelo generativo
 gr.ChatInterface(
     fn=generate,
-    chatbot=gr.Chatbot(show_label=False, show_share_button=False, show_copy_button=True, likeable=True, layout="panel", height=500),
+    chatbot=gr.Chatbot(avatar_images=["./user.png", "./botm.png"], bubble_full_width=False, show_label=False, show_share_button=False, show_copy_button=True, likeable=True, layout="panel", height=500),
     textbox=gr.Textbox(placeholder="¿Qué parámetros definen la calidad del agua?", container=False, scale=7),
-    theme="dark",
+    theme="soft",
     additional_inputs=additional_inputs,
     title="Mixtral 8B Fines didácticos Asistente de usuarios/clientes de Canal de Isabel ll",
     description='Autor: <a href=\"https://huggingface.co/Antonio49\">Antonio Fernández</a> de <a href=\"https://saturdays.ai/\">SaturdaysAI</a>. Formación: <a href=\"https://cursos.saturdays.ai/courses/\">Cursos Online AI</a> Aplicación desarrollada con fines docentes',

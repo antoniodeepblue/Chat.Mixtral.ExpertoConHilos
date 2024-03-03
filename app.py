@@ -107,11 +107,12 @@ examples = [
 # Crear una interfaz de chat Gradio con el modelo generativo
 gr.ChatInterface(
     fn=generate,
-    chatbot=gr.Chatbot(show_label=False, show_share_button=False, show_copy_button=True, likeable=True, layout="panel"),
+    chatbot=gr.Chatbot(show_label=False, show_share_button=False, show_copy_button=True, likeable=True, layout="panel", height=600),
+    textbox=gr.Textbox(placeholder="What is GenAI Ecosystem?", container=False, scale=7),
     additional_inputs=additional_inputs,
     title="Mixtral 8B Fines didácticos",
     description='Autor: <a href=\"https://huggingface.co/Antonio49\">Antonio Fernández</a> de <a href=\"https://saturdays.ai/\">SaturdaysAI</a>. Formación: <a href=\"https://cursos.saturdays.ai/courses/\">Cursos Online AI</a> Aplicación desarrollada con fines docentes',
-        theme="soft",
+    theme="soft",
     examples=examples,
     cache_examples=True,
       retry_btn="Repetir",

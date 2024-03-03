@@ -107,7 +107,7 @@ examples = [
 # Crear una interfaz de chat Gradio con el modelo generativo
 gr.ChatInterface(
     fn=generate,
-    chatbot=gr.Chatbot(avatar_images=["./user.png", "./botm.png"], bubble_full_width=False, show_label=False, show_share_button=False, show_copy_button=True, likeable=True, layout="panel", height=500),
+    chatbot=gr.Chatbot(show_label=False, show_share_button=False, show_copy_button=True, likeable=True, layout="panel", height=500),
     textbox=gr.Textbox(placeholder="¿Qué parámetros definen la calidad del agua?", container=False, scale=7),
     theme="soft",
     additional_inputs=additional_inputs,

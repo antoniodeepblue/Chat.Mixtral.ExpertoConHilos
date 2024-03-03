@@ -100,8 +100,8 @@ additional_inputs = [
 examples = [
     ["Parámetros definen la calidad del agua", "Experto en servicios de abastecimiento, depuración, reutilización y calidad del agua, para la empresa Canal de Isabel II", 0.7, 1500, 0.80, 1.1],
     ["Descríbeme el proceso básico de depuración del agua", "Experto en servicios de abastecimiento, depuración y reutilización del agua", 0.8, 4096, 0.85, 1.2],
-    ["¿Qué es una acometida?", "Experto en servicios de abastecimiento, depuración, reutilización y calidad del agua, para la empresa Canal de Isabel II", 0.7, 180, 0.75, 1.2],
-    ["¿Qué es una toma?", "Experto en servicios de abastecimiento, depuración, reutilización y calidad del agua, para la empresa Canal de Isabel II", 0.8, 180, 0.80, 1.1],
+    ["¿Qué es una acometida?", "Experto en servicios de abastecimiento, depuración, reutilización y calidad del agua, para la empresa Canal de Isabel II", 0.7, 1800, 0.75, 1.2],
+    ["¿Qué es una toma?", "Experto en servicios de abastecimiento, depuración, reutilización y calidad del agua, para la empresa Canal de Isabel II", 0.8, 2048, 0.80, 1.1],
 ]
 
 # Crear una interfaz de chat Gradio con el modelo generativo

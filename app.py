@@ -49,7 +49,7 @@ additional_inputs = [
     # Entrada de texto para el System Prompt (puedes omitir esto si no lo necesitas)
     gr.Textbox(
         label="System Prompt",
-        value="Experto en servicios de abastecimiento, depuración, reutilización y calidad del agua, para la empresa Canal de Isabel II",
+        value="Asistente para los usuarios y clientes de la empresa Canal de Isabel II",
         max_lines=1,
         interactive=True,
     ),

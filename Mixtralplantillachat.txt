@@ -1,0 +1,24 @@
+Plantilla de chat
+La plantilla utilizada para crear una solicitud para el modelo Instruct se define de la siguiente manera:
+
+<s>[INST] Instruction [/INST] Model answer</s>[INST] Follow-up instruction [/INST]
+
+Tenga en cuenta que y son tokens especiales para el principio de la cadena (BOS) y el final de la cadena (EOS),
+mientras que y son cadenas regulares.<s></s>[INST][/INST]
+
+NOTA
+Este formato debe respetarse estrictamente. De lo contrario, el modelo generará resultados subóptimos.
+
+Como referencia, este es el formato utilizado para tokenizar las instrucciones durante el ajuste fino:
+
+[START_SYMBOL_ID] + 
+tok("[INST]") + tok(USER_MESSAGE_1) + tok("[/INST]") +
+tok(BOT_MESSAGE_1) + [END_SYMBOL_ID] +
+…
+tok("[INST]") + tok(USER_MESSAGE_N) + tok("[/INST]") +
+tok(BOT_MESSAGE_N) + [END_SYMBOL_ID]
+
+NOTA
+La función nunca debe generar el token EOS. Sin embargo, FastChat (utilizado en vLLM) envía el mensaje completo como una cadena,
+lo que puede provocar una tokenización incorrecta del token EOS y una inyección de solicitud. 
+Se anima a los usuarios a enviar tokens en su lugar, como se ha descrito anteriormente.tok

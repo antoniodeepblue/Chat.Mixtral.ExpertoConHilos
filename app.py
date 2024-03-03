@@ -114,13 +114,9 @@ gr.ChatInterface(
         theme="soft",
     examples=examples,
     cache_examples=True,
-    retry_btn="Repetir",
-    undo_btn="Deshacer",
-    clear_btn="Borrar",
-    submit_btn="Enviar"
-
-    )
-
-iface.launch(share=True)
+      retry_btn="Repetir",
+      undo_btn="Deshacer",
+      clear_btn="Borrar",
+      submit_btn="Enviar",
     concurrency_limit=20,
 ).launch(show_api=False)

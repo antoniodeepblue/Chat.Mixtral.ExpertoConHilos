@@ -111,6 +111,25 @@ gr.ChatInterface(
     additional_inputs=additional_inputs,
     title="Mixtral 8B Fines didácticos",
     description='Autor: <a href=\"https://huggingface.co/Antonio49\">Antonio Fernández</a> de <a href=\"https://saturdays.ai/\">SaturdaysAI</a>. Formación: <a href=\"https://cursos.saturdays.ai/courses/\">Cursos Online AI</a> Aplicación desarrollada con fines docentes',
+        theme="soft",
     examples=examples,
+    iface = gr.ChatInterface(
+    fn = querying,
+    chatbot=gr.Chatbot(height=600),
+    textbox=gr.Textbox(placeholder="What is GenAI Ecosystem?", container=False, scale=7),
+    title="HiberusBot",
+    theme="soft",
+    examples=["Why Hiberus has created GenAI Ecosystem?",
+              "What is GenAI Ecosystem?"],
+
+    cache_examples=True,
+    retry_btn="Repetir",
+    undo_btn="Deshacer",
+    clear_btn="Borrar",
+    submit_btn="Enviar"
+
+    )
+
+iface.launch(share=True)
     concurrency_limit=20,
 ).launch(show_api=False)

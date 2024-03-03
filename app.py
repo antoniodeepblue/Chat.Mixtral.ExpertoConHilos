@@ -49,7 +49,7 @@ additional_inputs = [
     # Entrada de texto para el System Prompt (puedes omitir esto si no lo necesitas)
     gr.Textbox(
         label="System Prompt",
-        value="Experto en servicios de abastecimiento, depuracion, reutilizacion y calidad del agua, para la empresa Canal de Isabel II",
+        value="Experto en servicios de abastecimiento, depuración, reutilización y calidad del agua, para la empresa Canal de Isabel II",
         max_lines=1,
         interactive=True,
     ),
@@ -98,17 +98,17 @@ additional_inputs = [
 
 # Ejemplos predefinidos para la interfaz Gradio
 examples = [
-    ["Parametros definen la calidad del agua", "Experto en servicios de abastecimiento, depuracion, reutilizacion y calidad del agua, para la empresa Canal de Isabel II", 0.7, 150, 0.80, 1.1],
-    ["Describeme el proceso basico de depuracion del agua", "Experto en servicios de abastecimiento, depuracion y reutilizacion del agua", 0.8, 250, 0.85, 1.2],
-    ["¿Que es una acometida?", "Experto en servicios de abastecimiento, depuracion, reutilizacion y calidad del agua, para la empresa Canal de Isabel II", 0.7, 180, 0.75, 1.2],
-    ["¿Que es una toma?", "Experto en servicios de abastecimiento, depuracion, reutilizacion y calidad del agua, para la empresa Canal de Isabel II", 0.8, 180, 0.80, 1.1],
+    ["Parámetros definen la calidad del agua", "Experto en servicios de abastecimiento, depuración, reutilización y calidad del agua, para la empresa Canal de Isabel II", 0.7, 1500, 0.80, 1.1],
+    ["Descríbeme el proceso básico de depuración del agua", "Experto en servicios de abastecimiento, depuración y reutilización del agua", 0.8, 4096, 0.85, 1.2],
+    ["¿Qué es una acometida?", "Experto en servicios de abastecimiento, depuración, reutilización y calidad del agua, para la empresa Canal de Isabel II", 0.7, 180, 0.75, 1.2],
+    ["¿Qué es una toma?", "Experto en servicios de abastecimiento, depuración, reutilización y calidad del agua, para la empresa Canal de Isabel II", 0.8, 180, 0.80, 1.1],
 ]
 
 # Crear una interfaz de chat Gradio con el modelo generativo
 gr.ChatInterface(
     fn=generate,
     chatbot=gr.Chatbot(show_label=False, show_share_button=False, show_copy_button=True, likeable=True, layout="panel", height=500),
-    textbox=gr.Textbox(placeholder="¿Qué parametros definen la calidad del agua?", container=False, scale=7),
+    textbox=gr.Textbox(placeholder="¿Qué parámetros definen la calidad del agua?", container=False, scale=7),
     additional_inputs=additional_inputs,
     title="Mixtral 8B Fines didácticos",
     description='Autor: <a href=\"https://huggingface.co/Antonio49\">Antonio Fernández</a> de <a href=\"https://saturdays.ai/\">SaturdaysAI</a>. Formación: <a href=\"https://cursos.saturdays.ai/courses/\">Cursos Online AI</a> Aplicación desarrollada con fines docentes',

@@ -5,6 +5,8 @@ import gradio as gr
 # Crear un cliente de inferencia para el modelo preentrenado Mixtral-8x7B-Instruct-v0.1
 client = InferenceClient("mistralai/Mixtral-8x7B-Instruct-v0.1")
 
+system_prompt ="Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/"
+
 # Función para formatear el prompt con historial
 def format_prompt(message, history, system_prompt):
     prompt = "<s>"
@@ -35,7 +37,7 @@ def generate(
 
     # Formatear el prompt y obtener la respuesta del modelo de manera continua
     formatted_prompt = format_prompt(
-        prompt, history, system_prompt= "Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/")
+        prompt, history, system_prompt)
     stream = client.text_generation(formatted_prompt, **generate_kwargs, stream=True, details=True, return_full_text=False)
     output = ""
 
@@ -67,6 +69,7 @@ gr.ChatInterface(
     theme="soft",
     title="Mixtral 8B Fines didácticos Asistente de usuarios/clientes de Canal de Isabel ll",
     description='Autor: <a href=\"https://huggingface.co/Antonio49\">Antonio Fernández</a> de <a href=\"https://saturdays.ai/\">SaturdaysAI</a>. Formación: <a href=\"https://cursos.saturdays.ai/courses/\">Cursos Online AI</a> Aplicación desarrollada con fines docentes',
+    cache_examples=True,    
         retry_btn="Repetir",
         undo_btn="Deshacer",
         clear_btn="Borrar",

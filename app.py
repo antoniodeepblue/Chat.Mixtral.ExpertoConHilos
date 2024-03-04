@@ -5,6 +5,10 @@ import gradio as gr
 # Crear un cliente de inferencia para el modelo preentrenado Mixtral-8x7B-Instruct-v0.1
 client = InferenceClient("mistralai/Mixtral-8x7B-Instruct-v0.1")
 
+# Variable para controlar la conversación
+conversation_ongoing = True
+
+
 # Función para formatear el prompt con historial
 def format_prompt(message, history, system_prompt):
     prompt = "<s>"
@@ -44,6 +48,19 @@ def generate(
         yield output
     return output
 
+# Función para la conversación inicial en un hilo separado
+def initial_conversation():
+    global conversation_ongoing
+    user_input = gr.textbox("Por favor, preséntate:")
+    gr.button("Terminar conversación", onclick=lambda: end_conversation())
+
+# Función para finalizar la conversación
+def end_conversation():
+    global conversation_ongoing
+    conversation_ongoing = False
+
+        
+        
 # Configurar inputs adicionales para la interfaz Gradio
 additional_inputs = [
     # Entrada de texto para el System Prompt (puedes omitir esto si no lo necesitas)

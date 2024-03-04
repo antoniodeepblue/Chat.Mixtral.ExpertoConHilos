@@ -107,7 +107,16 @@ examples = [
 # Crear una interfaz de chat Gradio con el modelo generativo
 gr.ChatInterface(
     fn=generate,
-    chatbot=gr.Chatbot(avatar_images=["./15f4b2d3-c4f4-4a29-93cd-e47214953bd9.png", "./botm.png"], bubble_full_width=False, show_label=False, show_share_button=False, show_copy_button=True, likeable=True, layout="panel", height=500),
+    chatbot=gr.Chatbot(
+        avatar_images=["./15f4b2d3-c4f4-4a29-93cd-e47214953bd9.png", "./botm.png"],
+        bubble_full_width=False,
+        show_label=False,
+        show_share_button=False,
+        show_copy_button=True,
+        likeable=True,
+        layout="panel",
+        height=500,
+    ),
     textbox=gr.Textbox(placeholder="¿Qué parámetros definen la calidad del agua?", container=False, scale=7),
     theme="soft",
     additional_inputs=additional_inputs,
@@ -115,9 +124,9 @@ gr.ChatInterface(
     description='Autor: <a href=\"https://huggingface.co/Antonio49\">Antonio Fernández</a> de <a href=\"https://saturdays.ai/\">SaturdaysAI</a>. Formación: <a href=\"https://cursos.saturdays.ai/courses/\">Cursos Online AI</a> Aplicación desarrollada con fines docentes',
     examples=examples,
     cache_examples=True,
-      retry_btn="Repetir",
-      undo_btn="Deshacer",
-      clear_btn="Borrar",
-      submit_btn="Enviar",
+    retry_btn="Repetir",
+    undo_btn="Deshacer",
+    clear_btn="Borrar",
+    submit_btn="Enviar",
     concurrency_limit=20,
 ).launch(show_api=False)

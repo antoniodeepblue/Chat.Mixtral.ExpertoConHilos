@@ -35,7 +35,7 @@ def generate(
 
     # Formatear el prompt y obtener la respuesta del modelo de manera continua
     formatted_prompt = format_prompt(prompt, history, system_prompt)
-    stream = client.text_generation(prompt, history, system_prompt, **generate_kwargs, stream=True, details=True, return_full_text=False)
+    stream = client.text_generation(formatted_prompt, **generate_kwargs, stream=True, details=True, return_full_text=False)
     output = ""
 
     # Iterar a través de las respuestas en el stream
@@ -70,7 +70,7 @@ gr.ChatInterface(
     ),
     textbox=gr.Textbox(placeholder="¿Qué parámetros definen la calidad del agua?", container=False, scale=7),
     theme="soft",
-    additional_inputs=additional_inputs,
+    #additional_inputs=additional_inputs,
     title="Mixtral 8B Fines didácticos Asistente de usuarios/clientes de Canal de Isabel ll",
     description='Autor: <a href=\"https://huggingface.co/Antonio49\">Antonio Fernández</a> de <a href=\"https://saturdays.ai/\">SaturdaysAI</a>. Formación: <a href=\"https://cursos.saturdays.ai/courses/\">Cursos Online AI</a> Aplicación desarrollada con fines docentes',
         retry_btn="Repetir",

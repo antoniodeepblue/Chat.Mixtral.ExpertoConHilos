@@ -7,7 +7,7 @@ client = InferenceClient("mistralai/Mixtral-8x7B-Instruct-v0.1")
 
 
 # Función para formatear el prompt con historial
-def format_prompt(message, history, system_prompt="Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/"):
+def format_prompt(message, history, system_prompt):
     prompt = "<s>"
     for user_prompt, bot_response in history:
         prompt += f"[INST] {user_prompt} [/INST]"
@@ -17,7 +17,7 @@ def format_prompt(message, history, system_prompt="Asistente para los usuarios y
 
 # Función para generar respuestas dada una serie de parámetros
 def generate(
-    prompt, history, system_prompt, temperature=0.9, max_new_tokens=4096, top_p=0.95, repetition_penalty=1.0,):
+    prompt, history, system_prompt="Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/", temperature=0.9, max_new_tokens=4096, top_p=0.95, repetition_penalty=1.0,):
     # Ajustar valores de temperatura y top_p para asegurar que estén en el rango adecuado
     temperature = float(temperature)
     if temperature < 1e-2:

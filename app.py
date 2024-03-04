@@ -16,7 +16,7 @@ def format_prompt(message, history, system_prompt):
 
 # Función para generar respuestas dada una serie de parámetros
 def generate(
-    prompt, history, system_prompt, temperature=0.9, max_new_tokens=4096, top_p=0.95, repetition_penalty=1.0,):
+    prompt, history, system_prompt="Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/.", temperature=0.9, max_new_tokens=4096, top_p=0.95, repetition_penalty=1.0,):
     # Ajustar valores de temperatura y top_p para asegurar que estén en el rango adecuado
     temperature = float(temperature)
     if temperature < 1e-2:
@@ -70,7 +70,7 @@ gr.ChatInterface(
     ),
     textbox=gr.Textbox(placeholder="¿Qué parámetros definen la calidad del agua?", container=False, scale=7),
     theme="soft",
-    #additional_inputs=additional_inputs,
+    additional_inputs=additional_inputs,
     title="Mixtral 8B Fines didácticos Asistente de usuarios/clientes de Canal de Isabel ll",
     description='Autor: <a href=\"https://huggingface.co/Antonio49\">Antonio Fernández</a> de <a href=\"https://saturdays.ai/\">SaturdaysAI</a>. Formación: <a href=\"https://cursos.saturdays.ai/courses/\">Cursos Online AI</a> Aplicación desarrollada con fines docentes',
         retry_btn="Repetir",

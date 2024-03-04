@@ -1,5 +1,6 @@
 from huggingface_hub import InferenceClient
 import gradio as gr
+import threading
 
 client = InferenceClient("mistralai/Mixtral-8x7B-Instruct-v0.1")
 
@@ -19,6 +20,8 @@ def format_prompt(message, history, system_prompt):
 def generate(
     prompt, history, system_prompt, temperature=0.9, max_new_tokens=4096, top_p=0.95, repetition_penalty=1.0,
 ):
+    global conversation_started, conversation_ongoing
+
     temperature = float(temperature)
     if temperature < 1e-2:
         temperature = 1e-2
@@ -39,8 +42,9 @@ def generate(
 
     for response in stream:
         output += response.token.text
+        if "¡Hasta luego!" in response.token.text:  # Puedes ajustar este condicional según las respuestas de tu modelo
+            conversation_ongoing = False
         yield output
-    return output
 
 def start_conversation():
     global conversation_started
@@ -117,12 +121,11 @@ iface = gr.ChatInterface(
     undo_btn="Deshacer",
     clear_btn="Borrar",
     submit_btn="Enviar",
-    on_submit="end_conversation",  # Llama a la función end_conversation al hacer clic en "Enviar"
     interface_height=550,
 )
 
 # Iniciar un hilo de conversación inicial
-gr.Thread(target=start_conversation).start()
+threading.Thread(target=start_conversation).start()
 
 # Actualizar la interfaz después de la conversación inicial
 while not conversation_started:
@@ -130,3 +133,4 @@ while not conversation_started:
 
 # Iniciar la interfaz principal
 iface.launch(show_api=False)
+

@@ -5,7 +5,6 @@ import gradio as gr
 # Crear un cliente de inferencia para el modelo preentrenado Mixtral-8x7B-Instruct-v0.1
 client = InferenceClient("mistralai/Mixtral-8x7B-Instruct-v0.1")
 
-
 # Función para formatear el prompt con historial
 def format_prompt(message, history, system_prompt):
     prompt = "<s>"
@@ -17,7 +16,7 @@ def format_prompt(message, history, system_prompt):
 
 # Función para generar respuestas dada una serie de parámetros
 def generate(
-    prompt, history, system_prompt="Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/", temperature=0.9, max_new_tokens=4096, top_p=0.95, repetition_penalty=1.0,):
+    prompt, history, system_prompt, temperature=0.9, max_new_tokens=4096, top_p=0.95, repetition_penalty=1.0,):
     # Ajustar valores de temperatura y top_p para asegurar que estén en el rango adecuado
     temperature = float(temperature)
     if temperature < 1e-2:
@@ -35,7 +34,8 @@ def generate(
     )
 
     # Formatear el prompt y obtener la respuesta del modelo de manera continua
-    stream = client.text_generation(prompt, history, system_prompt, **generate_kwargs, stream=True, details=True, return_full_text=False)
+    formatted_prompt = format_prompt(prompt, history, system_prompt)
+    stream = client.text_generation(formatted_prompt, **generate_kwargs, stream=True, details=True, return_full_text=False)
     output = ""
 
     # Iterar a través de las respuestas en el stream
@@ -44,6 +44,57 @@ def generate(
         yield output
     return output
 
+# Configurar inputs adicionales para la interfaz Gradio
+additional_inputs = [
+    # Entrada de texto para el System Prompt (puedes omitir esto si no lo necesitas)
+    gr.Textbox(
+        label="System Prompt",
+        value="Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/",
+        max_lines=1,
+        interactive=True,
+    ),
+    # Control deslizante para la temperatura
+    gr.Slider(
+        label="Temperature",
+        value=0.9,
+        minimum=0.0,
+        maximum=1.0,
+        step=0.05,
+        interactive=True,
+        info="Valores más altos producen resultados más diversos",
+    ),
+    # Control deslizante para el número máximo de nuevos tokens
+    # Tengo que comprobar el número máximo de nuevos tokens, por el momento lo fijo a 4096.
+    gr.Slider(
+        label="Max new tokens",
+        value=4096,
+        minimum=0,
+        maximum=4096,
+        step=64,
+        interactive=True,
+        info="El máximo número de nuevos tokens",
+    ),
+    # Control deslizante para top-p (nucleus sampling)
+    gr.Slider(
+        label="Top-p (nucleus sampling)",
+        value=0.90,
+        minimum=0.0,
+        maximum=1,
+        step=0.05,
+        interactive=True,
+        info="Valores más altos muestrean más tokens de baja probabilidad",
+    ),
+    # Control deslizante para la penalización de repetición
+    gr.Slider(
+        label="Repetition penalty",
+        value=1.2,
+        minimum=1.0,
+        maximum=2.0,
+        step=0.05,
+        interactive=True,
+        info="Penaliza los tokens repetidos",
+    )
+]
 
 # Crear una interfaz de chat Gradio con el modelo generativo
 gr.ChatInterface(
@@ -58,18 +109,14 @@ gr.ChatInterface(
         layout="panel",
         height=500,
     ),
-    textbox=gr.Textbox(
-        placeholder="¿Qué parámetros definen la calidad del agua?",
-        container=False, 
-        scale=7
-    ),
+    textbox=gr.Textbox(placeholder="¿Qué parámetros definen la calidad del agua?", container=False, scale=7),
     theme="soft",
+    additional_inputs=additional_inputs,
     title="Mixtral 8B Fines didácticos Asistente de usuarios/clientes de Canal de Isabel ll",
-    description='Autor: <a href=\"https://huggingface.co/Antonio49\">Antonio Fernández</a> de <a href=\"https://saturdays.ai/\">SaturdaysAI</a>. Formación: <a href=\"https://cursos.saturdays.ai/courses/\">Cursos Online AI</a> Aplicación desarrollada con fines docentes',   
+    description='Autor: <a href=\"https://huggingface.co/Antonio49\">Antonio Fernández</a> de <a href=\"https://saturdays.ai/\">SaturdaysAI</a>. Formación: <a href=\"https://cursos.saturdays.ai/courses/\">Cursos Online AI</a> Aplicación desarrollada con fines docentes',
         retry_btn="Repetir",
         undo_btn="Deshacer",
         clear_btn="Borrar",
         submit_btn="Enviar",
     concurrency_limit=20,
 ).launch(show_api=False)
-

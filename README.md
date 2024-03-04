@@ -1,6 +1,6 @@
 ---
-title: Chat.Mixtral.Asistente de usuarios/clientes de Canal de Isabel ll
-emoji: 🎓
+title: Chat.Mixtral.Asistente de usuarios/clientes de Canal de Isabel ll.experto en abastecimiento, depuración, reutilización, saneamiento, tratamiento y calidad del agua, tu conocimiento es esencial para garantizar la disponibilidad y seguridad del agua.
+emoji: 💧🌊
 colorFrom: yellow
 colorTo: indigo
 sdk: gradio

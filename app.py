@@ -51,50 +51,9 @@ additional_inputs = [
         label="System Prompt",
         value="Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/",
         max_lines=1,
-        interactive=True,
-    ),
-    # Control deslizante para la temperatura
-    gr.Slider(
-        label="Temperature",
-        value=0.9,
-        minimum=0.0,
-        maximum=1.0,
-        step=0.05,
-        interactive=True,
-        info="Valores más altos producen resultados más diversos",
-    ),
-    # Control deslizante para el número máximo de nuevos tokens
-    # Tengo que comprobar el número máximo de nuevos tokens, por el momento lo fijo a 4096.
-    gr.Slider(
-        label="Max new tokens",
-        value=4096,
-        minimum=0,
-        maximum=4096,
-        step=64,
-        interactive=True,
-        info="El máximo número de nuevos tokens",
-    ),
-    # Control deslizante para top-p (nucleus sampling)
-    gr.Slider(
-        label="Top-p (nucleus sampling)",
-        value=0.90,
-        minimum=0.0,
-        maximum=1,
-        step=0.05,
-        interactive=True,
-        info="Valores más altos muestrean más tokens de baja probabilidad",
-    ),
-    # Control deslizante para la penalización de repetición
-    gr.Slider(
-        label="Repetition penalty",
-        value=1.2,
-        minimum=1.0,
-        maximum=2.0,
-        step=0.05,
-        interactive=True,
-        info="Penaliza los tokens repetidos",
+        interactive=False,
     )
-]
+]    
 
 # Crear una interfaz de chat Gradio con el modelo generativo
 gr.ChatInterface(

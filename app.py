@@ -60,7 +60,6 @@ gr.ChatInterface(
     ),
     textbox=gr.Textbox(
         placeholder="¿Qué parámetros definen la calidad del agua?",
-        default="Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/",
         container=False, 
         scale=7
     ),
@@ -73,5 +72,11 @@ gr.ChatInterface(
         clear_btn="Borrar",
         submit_btn="Enviar",
     concurrency_limit=20,
-).launch(show_api=False)
+)
+
+# Establecer el valor predeterminado después de la creación del objeto Textbox
+interface.textbox.value = "Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/"
+
+# Lanzar la interfaz
+interface.launch(show_api=False)
 

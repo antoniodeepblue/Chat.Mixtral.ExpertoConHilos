@@ -8,6 +8,8 @@ client = InferenceClient("mistralai/Mixtral-8x7B-Instruct-v0.1")
 # Variable para controlar la conversación
 conversation_ongoing = True
 
+system_prompt = "Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/"
+
 
 # Función para formatear el prompt con historial
 def format_prompt(message, history, system_prompt):
@@ -145,5 +147,11 @@ gr.ChatInterface(
     undo_btn="Deshacer",
     clear_btn="Borrar",
     submit_btn="Enviar",
+    on_submit=end_conversation,  # Llama a la función end_conversation al hacer clic en "Enviar"
     concurrency_limit=20,
 ).launch(show_api=False)
+
+while conversation_ongoing:
+    time.sleep(1)
+
+print("Conversación finalizada.")

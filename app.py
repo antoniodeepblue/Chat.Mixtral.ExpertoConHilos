@@ -121,7 +121,7 @@ iface = gr.ChatInterface(
     undo_btn="Deshacer",
     clear_btn="Borrar",
     submit_btn="Enviar",
-    interface_height=550,
+    concurrency_limit=20,
 )
 
 # Iniciar un hilo de conversación inicial

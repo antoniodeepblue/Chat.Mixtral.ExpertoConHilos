@@ -117,7 +117,7 @@ iface = gr.ChatInterface(
     undo_btn="Deshacer",
     clear_btn="Borrar",
     submit_btn="Enviar",
-    on_submit=end_conversation,  # Llama a la función end_conversation al hacer clic en "Enviar"
+    on_submit="end_conversation",  # Llama a la función end_conversation al hacer clic en "Enviar"
     interface_height=550,
 )
 

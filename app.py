@@ -36,9 +36,7 @@ def generate(
     )
 
     # Formatear el prompt y obtener la respuesta del modelo de manera continua
-    formatted_prompt = format_prompt(
-        prompt, history, system_prompt)
-    stream = client.text_generation(formatted_prompt, **generate_kwargs, stream=True, details=True, return_full_text=False)
+    stream = client.text_generation(prompt, history, system_prompt, **generate_kwargs, stream=True, details=True, return_full_text=False)
     output = ""
 
     # Iterar a través de las respuestas en el stream

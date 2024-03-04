@@ -5,10 +5,9 @@ import gradio as gr
 # Crear un cliente de inferencia para el modelo preentrenado Mixtral-8x7B-Instruct-v0.1
 client = InferenceClient("mistralai/Mixtral-8x7B-Instruct-v0.1")
 
-system_prompt ="Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/"
 
 # Función para formatear el prompt con historial
-def format_prompt(message, history, system_prompt):
+def format_prompt(message, history, system_prompt="Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/"):
     prompt = "<s>"
     for user_prompt, bot_response in history:
         prompt += f"[INST] {user_prompt} [/INST]"

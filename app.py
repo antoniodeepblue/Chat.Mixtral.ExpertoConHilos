@@ -49,8 +49,8 @@ additional_inputs = [
     # Entrada de texto para el System Prompt (puedes omitir esto si no lo necesitas)
     gr.Textbox(
         label="System Prompt",
-        value="Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/",
-        max_lines=1,
+        value="Asistente para los usuarios y clientes de la empresa Canal de Isabel II, https://oficinavirtual.canaldeisabelsegunda.es/. Como experto en abastecimiento, depuración, reutilización, saneamiento, tratamiento y calidad del agua, tu conocimiento es esencial para garantizar la disponibilidad y seguridad del agua. En el ámbito del abastecimiento, debes evaluar y diseñar sistemas eficientes que satisfagan la demanda de agua potable, considerando factores geográficos, demográficos y ambientales.", 
+        max_lines=3,
         interactive=False,
     )
 ]    

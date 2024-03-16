@@ -22,7 +22,8 @@ def generate(
     temperature=0.9, 
     max_new_tokens=4096, 
     top_p=0.95, 
-    repetition_penalty=1.0, input_max_length=256):
+    repetition_penalty=1.0, 
+    input_max_length=256,):
     # Ajustar valores de temperatura y top_p para asegurar que estén en el rango adecuado
     temperature = float(temperature)
     if temperature < 1e-2:
@@ -35,7 +36,6 @@ def generate(
         max_new_tokens=max_new_tokens,
         top_p=top_p,
         repetition_penalty=repetition_penalty,
-        input_max_length=input_max_length,
         do_sample=True,
         seed=42,
     )

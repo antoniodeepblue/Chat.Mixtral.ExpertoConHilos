@@ -1,8 +1,8 @@
 ---
-title: Chat.Mixtral.Asistente de usuarios/clientes de Canal de Isabel ll.experto en abastecimiento, depuración, reutilización, saneamiento, tratamiento y calidad del agua, tu conocimiento es esencial para garantizar la disponibilidad y seguridad del agua.
-emoji: 💧🌊
-colorFrom: yellow
-colorTo: indigo
+title: Chat.Mixtral.Experto en servicios de abastecimiento, depuración, reutilización, alcantarillado y calidad del agua, para la empresa Canal de Isabel II. Asistente obras hidraulicas, cumplimiento de sanidad y seguridad de las instalaciones.
+emoji: 💧🌈
+colorFrom: green
+colorTo: blue
 sdk: gradio
 sdk_version: 4.16.0
 app_file: app.py
